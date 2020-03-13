@@ -2,4 +2,7 @@ git clone
 git commit -m coment 
 git add . Добавить в локальный контейнер
 git status  
-git push 
+git push - 
+
+PowerShell - 
+az login - для логина
