@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nagato
+  namespace: homework
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: yamato
+          image: animeboooyyyy/nginx2:yamato
+          imagePullPolicy: Always
+          ports:
+            - name: port
+              containerPort: 80
+              protocol: TCP
+      imagePullSecrets:
+        - name: kawaci
